@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fundamentals - Lit Element</title>
-    <script src="./src/my-element.js" type="module"></script>
+    <script src="./src/index.js" type="module"></script>
+
   </head>
   <body>
     <h1>Lit Element</h1>
     <my-element></my-element>
+    <my-message id="msg" msg="Bienvenidos a todos"></my-message>
+    <button id="clic">Haz click</button>
+
+    <script>
+      document.getElementById('clic').addEventListener('click', function() {
+        document.getElementById('msg').setAttribute('msg', 'Esto es un nuevo valor')
+        document.getElementById('msg').setAttribute('color', 'red')
+      })
+    </script>
+
   </body>
 </html>
